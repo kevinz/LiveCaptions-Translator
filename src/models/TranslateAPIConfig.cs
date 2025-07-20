@@ -92,6 +92,17 @@ namespace LiveCaptionsTranslator.models
                 OnPropertyChanged("Port");
             }
         }
+
+        private string ip = "192.168.1.99";
+        public string Ip
+        {
+            get => ip;
+            set
+            {
+                IP = value;
+                OnPropertyChanged("Ip");
+            }
+        }
     }
 
     public class OpenAIConfig : BaseLLMConfig
