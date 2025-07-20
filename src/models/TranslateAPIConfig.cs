@@ -99,7 +99,7 @@ namespace LiveCaptionsTranslator.models
             get => ip;
             set
             {
-                IP = value;
+                ip = value;
                 OnPropertyChanged("Ip");
             }
         }
