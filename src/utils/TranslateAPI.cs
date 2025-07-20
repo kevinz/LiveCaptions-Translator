@@ -119,7 +119,7 @@ namespace LiveCaptionsTranslator.utils
             var config = Translator.Setting["Ollama"] as OllamaConfig;
             string language = OllamaConfig.SupportedLanguages.TryGetValue(
                 Translator.Setting.TargetLanguage, out var langValue) ? langValue : Translator.Setting.TargetLanguage;
-            string apiUrl = $"http://localhost:{config.Port}/api/chat";
+            string apiUrl = $"http://{config.IP}:{config.Port}/api/chat";
             
             var messages = new List<BaseLLMConfig.Message>
             {
